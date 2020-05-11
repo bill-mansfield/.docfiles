@@ -101,3 +101,6 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias gs='git status'
+alias snipe='cd ~/dev/kit; yarn start'
+alias kit='cd ~/dev/kit'
+alias pushdots='cp .zshrc .vimrc ~/dev/dotfiles; cd ~/dev/dotfiles; git add -A; git commit -m "update dots"; git push'
