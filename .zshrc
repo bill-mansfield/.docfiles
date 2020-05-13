@@ -97,6 +97,15 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
+
+function gitfix () {
+    RANDNUM=$RANDOM;
+    git clone git@github.com:bill-mansfield/kit.git ~/dev/kit_backups/backup$RANDNUM;
+    rm -rf ~/dev/kit/.git;
+    mv ~/dev/kit_backups/backup$RANDNUM/.git ~/dev/kit/
+    echo "Kit's git has been un-corrupted"
+}
+
 # Example aliases
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
