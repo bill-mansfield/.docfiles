@@ -13,7 +13,8 @@ endif
 call plug#begin('~/.vim/plugged')
 
 " Make sure you use single quotes
-
+Plug 'morhetz/gruvbox'
+Plug 'neoClide/coc.nvim', {'branch': 'release'}
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 Plug 'junegunn/vim-easy-align'
 
@@ -187,12 +188,16 @@ set listchars=tab:▸\ ,eol:¬
 " set list " To enable by default
 " Or use your leader key + l to toggle on/off
 map <leader>l :set list!<CR> " Toggle tabs and EOL
+colorscheme gruvbox
+nmap <leader>gd <Plug>(coc-definition)
+nmap <leader>gr <Plug>(coc-references)
+nnoremap <C-p> :GFiles<CR>
 
 " Color scheme (terminal)
-set t_Co=256
+" set t_Co=256
 set background=dark
-let g:solarized_termcolors=256
-let g:solarized_termtrans=1
+" let g:solarized_termcolors=256
+" let g:solarized_termtrans=1
 " put https://raw.github.com/altercation/vim-colors-solarized/master/colors/solarized.vim
 " in ~/.vim/colors/ and uncomment:
 " colorscheme ThemerVim
