@@ -1,6 +1,12 @@
 # If you come from bash you might have to change your $PATH
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# React native Android studio SDK Path stuff
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -111,5 +117,5 @@ alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias gs='git status'
 alias snipe='cd ~/dev/kit; yarn start'
-alias kit='cd ~/dev/kit'
+alias kit='cd ~/dev/kit; vim .'
 alias pushdots='cp .zshrc .vimrc ~/dev/dotfiles; cd ~/dev/dotfiles; git add -A; git commit -m "update dots"; git push'
